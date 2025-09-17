@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "nombre": "Reserva Natural Volcán Mombacho",
+    "categoría": "Natural",
+    "fotografía": "https://i.pinimg.com/736x/7d/33/6f/7d336fcdb78e7568a55a28a59c13e216.jpg",
+    "descripción": "Reserva que protege el volcán Mombacho y su bosque nuboso. Ofrece senderos, observación de aves y vistas panorámicas al lago Cocibolca y Granada.",
+    "ubicación": "Pacífico"
+  },
+  {
+    "id": 2,
+    "nombre": "Isletas de Granada",
+    "categoría": "Turística",
+    "fotografía": "https://i.pinimg.com/736x/d4/9a/23/d49a23c8a956f5eda5ba93efdb4831ce.jpg",
+    "descripción": "Más de 300 pequeñas islas formadas por la erupción del volcán Mombacho. Populares para paseos en lancha, kayak y turismo recreativo.",
+    "ubicación": "Pacífico"
+  },
+  {
+    "id": 3,
+    "nombre": "Reserva Biológica Indio Maíz",
+    "categoría": "Natural",
+    "fotografía": "https://www.mapanicaragua.com/wp-content/uploads/2020/06/Reserva-Indio-Maiz-Nicaragua.jpg",
+    "descripción": "Una de las áreas protegidas más importantes de Nicaragua. Alberga gran biodiversidad de flora y fauna en la Región Autónoma del Caribe Sur.",
+    "ubicación": "Atlántico"
+  },
+  {
+    "id": 4,
+    "nombre": "Reserva Natural Miraflor",
+    "categoría": "Mixta",
+    "fotografía": "https://i.pinimg.com/736x/18/80/ba/1880baeec382822b805d5d9b7bb98ae9.jpg",
+    "descripción": "Área protegida en Estelí que combina conservación natural con comunidades rurales que promueven el agroturismo y el turismo comunitario.",
+    "ubicación": "Centro"
+  },
+  {
+    "id": 5,
+    "nombre": "Volcán Masaya y Parque Nacional",
+    "categoría": "Natural",
+    "fotografía": "https://i.pinimg.com/736x/05/c5/63/05c563369a7fc1bb63245b08178df864.jpg",
+    "descripción": "Parque Nacional donde se encuentra el volcán Masaya, uno de los más activos de Centroamérica, con cráteres impresionantes y museo ecológico.",
+    "ubicación": "Pacífico"
+  },
+  {
+    "id": 6,
+    "nombre": "Cañón de Somoto",
+    "categoría": "Turística",
+    "fotografía": "https://i.pinimg.com/736x/d2/3a/ca/d23acaa6764e6dab14d1e4b23a1761e2.jpg",
+    "descripción": "Formación geológica impresionante con paredes de roca y un río navegable. Ideal para senderismo, paseos en balsa y turismo de aventura.",
+    "ubicación": "Centro"
+  },
+  {
+    "id": 7,
+    "nombre": "Reserva Natural Cerro Negro",
+    "categoría": "Natural",
+    "fotografía": "https://i.pinimg.com/736x/93/fc/be/93fcbe81a09c35a7b7735bbc05bb0420.jpg",
+    "descripción": "Volcán joven y activo famoso por el deporte extremo del sandboarding. Rodeado de paisajes áridos y vistas al occidente del país.",
+    "ubicación": "Pacífico"
+  },
+  {
+    "id": 8,
+    "nombre": "Corn Island",
+    "categoría": "Turística",
+    "fotografía": "https://i.pinimg.com/1200x/d8/27/f3/d827f3e5a8215f53e9ee7449ec23a4b8.jpg",
+    "descripción": "Dos islas caribeñas (Big Corn y Little Corn) de aguas cristalinas y playas paradisíacas. Destino popular para buceo y ecoturismo.",
+    "ubicación": "Atlántico"
+  }
+]

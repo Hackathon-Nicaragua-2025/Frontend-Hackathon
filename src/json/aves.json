@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nombre_común": "Guardabarranco",
+    "nombre_científico": "Eumomota superciliosa",
+    "fotografía": "https://i.pinimg.com/736x/b3/5e/a8/b35ea8acfa30c4f5401e435390d7a6ae.jpg",
+    "categoría": "Endémica",
+    "descripción": "Ave nacional de Nicaragua, conocida por su colorido plumaje verde, azul y naranja. Se distingue por sus plumas largas en la cola con forma de raqueta.",
+    "distribución": "Pacífico y Centro"
+  },
+  {
+    "id": 2,
+    "nombre_común": "Lora nuca amarilla",
+    "nombre_científico": "Amazona auropalliata",
+    "fotografía": "https://i.pinimg.com/736x/ae/98/80/ae9880c886fea8c517f9c4eacce5fe64.jpg",
+    "categoría": "Endémica",
+    "descripción": "Un loro muy conocido en Nicaragua, fácil de identificar por la mancha amarilla en la nuca y su habilidad de imitar sonidos.",
+    "distribución": "Pacífico y Centro"
+  },
+  {
+    "id": 3,
+    "nombre_común": "Trogón violáceo",
+    "nombre_científico": "Trogon violaceus",
+    "fotografía": "https://i.pinimg.com/736x/05/5d/0a/055d0a50e33efbda18053434afea8f41.jpg",
+    "categoría": "Residente",
+    "descripción": "Ave de plumaje brillante, con tonos morados y pecho amarillo. Habita en bosques húmedos y selvas tropicales.",
+    "distribución": "Atlántico"
+  },
+  {
+    "id": 4,
+    "nombre_común": "Zanate mayor",
+    "nombre_científico": "Quiscalus mexicanus",
+    "fotografía": "https://i.pinimg.com/1200x/e6/c6/e0/e6c6e083076f89bd4576ff8228952e6b.jpg",
+    "categoría": "Residente",
+    "descripción": "Ave negra con reflejos metálicos en el plumaje. Muy adaptable, se encuentra comúnmente en áreas urbanas y rurales.",
+    "distribución": "Pacífico, Centro y Atlántico"
+  },
+  {
+    "id": 5,
+    "nombre_común": "Gavilán de Swainson",
+    "nombre_científico": "Buteo swainsoni",
+    "fotografía": "https://i.pinimg.com/736x/a7/84/d9/a784d9fb3cefb5d90e5e167adc31285c.jpg",
+    "categoría": "Migratoria",
+    "descripción": "Rapaz migratoria que viaja desde Norteamérica hasta Sudamérica. Se observa en Nicaragua durante sus rutas migratorias.",
+    "distribución": "Pacífico y Centro"
+  },
+  {
+    "id": 6,
+    "nombre_común": "Colibrí esmeralda",
+    "nombre_científico": "Chlorostilbon canivetii",
+    "fotografía": "https://i.pinimg.com/736x/b2/ee/4f/b2ee4f835c6cdd1b67445519e5fa9993.jpg",
+    "categoría": "Residente",
+    "descripción": "Pequeño colibrí verde brillante que se alimenta de néctar y pequeños insectos. Muy ágil y común en jardines.",
+    "distribución": "Pacífico y Centro"
+  }
+]
