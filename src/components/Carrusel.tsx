@@ -1,38 +1,12 @@
-// Import For Hooks
-import { useMediaQuery } from "../hooks/mediaScreen";
 // Import For React Slick
 import Slider from "react-slick";
 // Import For React Slick Styles 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-// Interface Aves
-type Aves = {
-  id: number;
-  nombre_común: string;
-  nombre_científico: string;
-  fotografía: string;
-  categoría: string;
-  descripción: string;
-  distribución: string;
-}
-
-// Interface Reservas
-interface Reservas {
-  id: number;
-  nombre: string;
-  categoría: string;
-  fotografía: string;
-  descripción: string;
-  ubicación: string;
-}
-
-// Interface Carousel Props
-interface CarouselProps {
-  avesProps?: Aves[];
-  reservasProps?: Reservas[];
-  className?: string;
-};
+// Import For Hooks
+import { useMediaQuery } from "../hooks/mediaScreen";
+// Import For Types
+import type { CarouselProps } from "../types/carrusel";
 
 // Component Carrusel
 export const Carrusel = ({ avesProps, className }: CarouselProps) => {
@@ -46,6 +20,7 @@ export const Carrusel = ({ avesProps, className }: CarouselProps) => {
     autoplaySpeed: 2000,
     infinite: true,
     speed: 500,
+    hoverPause: true,
     slidesToShow: isMobile ? 1 : isTablet ? 2 : 3,
     slidesToScroll: isMobile ? 1 : isTablet ? 2 : 3,
     initialSlide: 0,
@@ -53,18 +28,21 @@ export const Carrusel = ({ avesProps, className }: CarouselProps) => {
 
   return (
     <div className={className}>
-      <Slider key={`${settings.slidesToShow}-${settings.slidesToScroll}`} {...settings}>
-        {avesProps?.map((avesProp) => (
-          <div
-            key={avesProp.id}
-          >
-            <img
-              src={avesProp.fotografía} alt={avesProp.nombre_común}
-              className="w-60 h-60 object-cover rounded-lg"
-            />
-          </div>
-        ))}
-      </Slider>
+      <div className="-mx-4 rounded-lg">
+        <Slider key={`${settings.slidesToShow}-${settings.slidesToScroll}`} {...settings}>
+          {avesProps?.map((avesProp) => (
+            <button
+              key={avesProp.id}
+              className="cursor-pointer px-4 rounded-lg hover:scale-110 transition-all duration-500 ease-in-out"
+            >
+              <img
+                src={avesProp.fotografía} alt={avesProp.nombre_común}
+                className="w-full h-60 object-cover object-top rounded-lg"
+              />
+            </button>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 }
@@ -79,6 +57,7 @@ export const CarruselReservas = ({ reservasProps, className }: CarouselProps) =>
     autoplaySpeed: 2000,
     infinite: true,
     speed: 500,
+    hoverPause: true,
     slidesToShow: isMobile ? 1 : isTablet ? 2 : 3,
     slidesToScroll: isMobile ? 1 : isTablet ? 2 : 3,
     initialSlide: 0,
@@ -87,19 +66,23 @@ export const CarruselReservas = ({ reservasProps, className }: CarouselProps) =>
 
   return (
     <div className={className}>
-      <Slider key={`${settings.slidesToShow}-${settings.slidesToScroll}`} {...settings}>
-        {reservasProps?.map((reservasProp) => (
-          <button
-            key={reservasProp.id}
-            onClick={() => console.log(reservasProp)}
-          >
-            <img
-              src={reservasProp.fotografía} alt={reservasProp.nombre}
-              className="w-60 h-60 object-cover rounded-lg"
-            />
-          </button>
-        ))}
-      </Slider>
+      <div className="-mx-2 rounded-lg">
+        <Slider key={`${settings.slidesToShow}-${settings.slidesToScroll}`} {...settings}>
+          {reservasProps?.map((reservasProp) => (
+            <div key={reservasProp.id} className="px-2">
+              <button
+                onClick={() => console.log(reservasProp)}
+                className="cursor-pointer px-2 rounded-lg hover:scale-110 transition-all duration-500 ease-in-out"
+              >
+                <img
+                  src={reservasProp.fotografía} alt={reservasProp.nombre}
+                  className="w-full h-60 object-cover object-top rounded-lg"
+                />
+              </button>
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 }

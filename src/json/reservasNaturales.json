@@ -27,7 +27,7 @@
     "id": 4,
     "nombre": "Reserva Natural Miraflor",
     "categoría": "Mixta",
-    "fotografía": "https://i.pinimg.com/736x/18/80/ba/1880baeec382822b805d5d9b7bb98ae9.jpg",
+    "fotografía": "https://i.pinimg.com/736x/46/1c/9f/461c9f8c11749e15befd15d59d5d8b9d.jpg",
     "descripción": "Área protegida en Estelí que combina conservación natural con comunidades rurales que promueven el agroturismo y el turismo comunitario.",
     "ubicación": "Centro"
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "nombre": "Volcán Masaya y Parque Nacional",
     "categoría": "Natural",
-    "fotografía": "https://i.pinimg.com/736x/05/c5/63/05c563369a7fc1bb63245b08178df864.jpg",
+    "fotografía": "https://i.pinimg.com/1200x/5a/5d/b5/5a5db53af38ca30935a98bfb8b180d77.jpg",
     "descripción": "Parque Nacional donde se encuentra el volcán Masaya, uno de los más activos de Centroamérica, con cráteres impresionantes y museo ecológico.",
     "ubicación": "Pacífico"
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "nombre": "Cañón de Somoto",
     "categoría": "Turística",
-    "fotografía": "https://i.pinimg.com/736x/d2/3a/ca/d23acaa6764e6dab14d1e4b23a1761e2.jpg",
+    "fotografía": "https://i.pinimg.com/1200x/2a/85/cd/2a85cd27f8a4c9026bd14201c7fa3f29.jpg",
     "descripción": "Formación geológica impresionante con paredes de roca y un río navegable. Ideal para senderismo, paseos en balsa y turismo de aventura.",
     "ubicación": "Centro"
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "nombre": "Corn Island",
     "categoría": "Turística",
-    "fotografía": "https://i.pinimg.com/1200x/d8/27/f3/d827f3e5a8215f53e9ee7449ec23a4b8.jpg",
+    "fotografía": "https://i.pinimg.com/1200x/51/9b/a2/519ba2009d85811155a9446980608398.jpg",
     "descripción": "Dos islas caribeñas (Big Corn y Little Corn) de aguas cristalinas y playas paradisíacas. Destino popular para buceo y ecoturismo.",
     "ubicación": "Atlántico"
   }
