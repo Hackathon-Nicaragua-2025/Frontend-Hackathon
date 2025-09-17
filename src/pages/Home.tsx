@@ -77,7 +77,7 @@ export default function Home() {
             className="w-4/5 mx-auto"
           />
         </div>
-        <div>
+        <div className="mt-8">
           <h2 className="mb-4">Reservas Naturales</h2>
           <CarruselReservas
             reservasProps={Reservas}
