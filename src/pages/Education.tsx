@@ -1,3 +1,5 @@
+// Import For React
+import { useState } from "react"
 // Import For Hooks
 import { useMediaQuery } from "../hooks/mediaScreen"
 // Import For Components
@@ -8,8 +10,6 @@ import { NavIcons, Marcadores } from "../components"
 import { HiOutlineLocationMarker } from "react-icons/hi"
 // Import For Router
 import { Link } from "react-router-dom"
-
-// Import For Assets
 // Import For Assets
 import ApoyarAlEcotourismo from '../assets/image/ApoyarAlEcotourismo.png'
 import NoBotarBasura from '../assets/image/NoBotarBasura.png'
@@ -26,6 +26,13 @@ export default function Education() {
 	// Responsive Constants
 	const isTablet = useMediaQuery("(max-width: 768px)");
 
+	// State: control single open marker
+	const [selectedMarkerId, setSelectedMarkerId] = useState<string | number | null>(null);
+
+	const handleSelectMarker = (id: string | number) => {
+		setSelectedMarkerId(prev => (prev === id ? null : id));
+	};
+
 	return (
 		<>
 			{/* NavBar */}
@@ -40,35 +47,59 @@ export default function Education() {
 				<div className="relative lg:w-[65%] lg:mx-auto">
 					<img src={ÁrbolMadroño} alt="Árbol Madroño" />
 					<Marcadores
+						id={1}
 						description="Apoya reservas y proyectos de conservacion locales"
 						y={90}
 						x={30}
-						icon={<HiOutlineLocationMarker />} />
+						icon={<HiOutlineLocationMarker />}
+						isOpen={selectedMarkerId === 1}
+						onSelect={handleSelectMarker}
+					/>
 					<Marcadores
+						id={2}
 						description="Respeta sus habitas, no cortes ni destruyas zonas de anidación"
 						y={40}
 						x={250}
-						icon={<HiOutlineLocationMarker />} />
+						icon={<HiOutlineLocationMarker />}
+						isOpen={selectedMarkerId === 2}
+						onSelect={handleSelectMarker}
+					/>
 					<Marcadores
+						id={3}
 						description="No uses pesticidas toxicas, Estas contaminan el ambiente y afectan la salud de las aves"
 						y={50}
 						x={150}
-						icon={<HiOutlineLocationMarker />} />
+						icon={<HiOutlineLocationMarker />}
+						isOpen={selectedMarkerId === 3}
+						onSelect={handleSelectMarker}
+					/>
 					<Marcadores
+						id={4}
 						description="No compres aves silvestres como mascotas, Esto fomenta el trafico ilegal"
 						y={80}
 						x={300}
-						icon={<HiOutlineLocationMarker />} />
+						icon={<HiOutlineLocationMarker />}
+						isOpen={selectedMarkerId === 4}
+						onSelect={handleSelectMarker}
+					/>
 					<Marcadores
+						id={5}
 						description="Coloca comederos y bebederos seguros. Especialmente en zonas urbanas"
 						y={90}
 						x={200}
-						icon={<HiOutlineLocationMarker />} />
+						icon={<HiOutlineLocationMarker />}
+						isOpen={selectedMarkerId === 5}
+						onSelect={handleSelectMarker}
+					/>
 					<Marcadores
+						id={6}
 						description="No molestes sus nidos, Evita acercarte demasiado o tocar huevos y crías"
 						y={100}
 						x={100}
-						icon={<HiOutlineLocationMarker />} />
+						icon={<HiOutlineLocationMarker />}
+						isOpen={selectedMarkerId === 6}
+						onSelect={handleSelectMarker}
+					/>
 				</div>
 			</div>
 			{/* Cuido de las Reservas Naturales */}
@@ -154,7 +185,7 @@ export default function Education() {
 				<iframe
 					className="w-full h-full"
 					src="https://www.youtube.com/embed/lWz96Kn0-0s?si=XLCALQG1JE2tL4r4&amp;start=2&autoplay=1&controls=1&loop=1&modestbranding=1&rel=0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 					allowFullScreen
 				></iframe>
 			</div>
