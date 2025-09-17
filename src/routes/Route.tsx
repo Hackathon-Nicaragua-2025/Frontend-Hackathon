@@ -3,7 +3,7 @@ import { type JSX } from "react"
 // Import For React Router Dom
 import { Route, Routes } from "react-router-dom"
 // Import For Pages
-import { Home, Privacy, Conditions } from "./index"
+import { Home, Events, Privacy, Conditions } from "./index"
 
 
 // Interface Route
@@ -17,6 +17,10 @@ export const routes: Route[] = [
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/events",
+    element: <Events />,
   },
   {
     path: "/privacy",

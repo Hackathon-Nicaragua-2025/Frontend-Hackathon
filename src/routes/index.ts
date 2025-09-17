@@ -4,3 +4,4 @@ import { lazy } from "react"
 export const Home = lazy(() => import("../pages/Home"))
 export const Privacy = lazy(() => import("../pages/Privacy"))
 export const Conditions = lazy(() => import("../pages/Conditions"))
+export const Events = lazy(() => import("../pages/Events"))

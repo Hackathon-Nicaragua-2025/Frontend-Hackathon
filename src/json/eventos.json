@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "Temporada de avistamiento del Guardabarranco",
+    "start": "2025-03-01",
+    "end": "2025-05-31",
+    "categoría": "Avistamiento",
+    "ave_relacionada": "Guardabarranco (Eumomota superciliosa)",
+    "ubicación": "Pacífico y Centro",
+    "descripción": "Durante la época seca se facilita observar al Guardabarranco en áreas abiertas, especialmente en zonas rurales y senderos turísticos."
+  },
+  {
+    "id": 2,
+    "title": "Festival Internacional de Aves Migratorias",
+    "start": "2025-10-15",
+    "end": "2025-10-20",
+    "categoría": "Evento Especial",
+    "ave_relacionada": "Gavilán de Swainson y otras migratorias",
+    "ubicación": "Reserva Natural Volcán Mombacho",
+    "descripción": "Festival anual que celebra la llegada de aves migratorias al país con actividades educativas, caminatas guiadas y talleres de conservación."
+  },
+  {
+    "id": 3,
+    "title": "Conteo ciudadano de aves",
+    "start": "2025-12-05",
+    "end": "2025-12-07",
+    "categoría": "Ciencia Ciudadana",
+    "ave_relacionada": "Todas las especies locales",
+    "ubicación": "Todo el país",
+    "descripción": "Actividad donde voluntarios y comunidades participan en el conteo nacional de aves, aportando datos científicos para su conservación."
+  },
+  {
+    "id": 4,
+    "title": "Temporada de avistamiento del Colibrí Esmeralda",
+    "start": "2025-04-01",
+    "end": "2025-06-30",
+    "categoría": "Avistamiento",
+    "ave_relacionada": "Colibrí esmeralda (Chlorostilbon canivetii)",
+    "ubicación": "Pacífico y Centro",
+    "descripción": "Durante la floración de muchas plantas se observa un incremento en la actividad de colibríes en jardines, bosques secos y reservas."
+  },
+  {
+    "id": 5,
+    "title": "Feria Nacional del Guardabarranco",
+    "start": "2025-09-10",
+    "end": "2025-09-12",
+    "categoría": "Evento Cultural",
+    "ave_relacionada": "Guardabarranco (Eumomota superciliosa)",
+    "ubicación": "Managua",
+    "descripción": "Feria cultural y ecológica dedicada al ave nacional de Nicaragua con exposiciones, arte, música y actividades de concientización."
+  }
+]
