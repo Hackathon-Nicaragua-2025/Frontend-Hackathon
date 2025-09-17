@@ -3,7 +3,7 @@ import { type JSX } from "react"
 // Import For React Router Dom
 import { Route, Routes } from "react-router-dom"
 // Import For Pages
-import { Home, Events, Privacy, Conditions } from "./index"
+import { Home, Events, Privacy, Conditions, Education, QuizEducation, QuizEvents, QuizHome } from "./index"
 
 
 // Interface Route
@@ -21,6 +21,22 @@ export const routes: Route[] = [
   {
     path: "/events",
     element: <Events />,
+  },
+  {
+    path: "/education",
+    element: <Education />,
+  },
+  {
+    path: "/quiz/education",
+    element: <QuizEducation />,
+  },
+  {
+    path: "/quiz/events",
+    element: <QuizEvents />,
+  },
+  {
+    path: "/quiz/home",
+    element: <QuizHome />,
   },
   {
     path: "/privacy",

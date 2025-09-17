@@ -11,6 +11,7 @@ import GridAves from "../assets/image/GridAves.png";
 import LogoNegativo from "../assets/image/LogoNegativo.svg";
 import MiniMagic from "../assets/image/MiniMagic.png";
 import Senderismo from "../assets/image/Senderismo.png";
+// Import For Router
 
 // Component Home
 export default function Home() {

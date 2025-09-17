@@ -34,7 +34,7 @@ export default function Events() {
 		<>
 			{/* NavBar */}
 			<NavBar />
-			<h2 className='mt-4 mx-8 text-center font-bold text-[#30D3C2F] md:w-3/4 md:mx-auto lg:w-2/3 lg:mx-auto'>
+			<h2 className='mt-8 mx-8 text-center font-bold text-[#30D3C2F] md:w-3/4 md:mx-auto lg:w-2/3 lg:mx-auto'>
 				En esta sección encontraras eventos que ocurren en el territorio nicaragüense. tales como avistamientos de aves, migraciones, festividades locales y otros eventos relevantes.
 			</h2>
 			<div className='flex flex-col items-center justify-center gap-4 mt-8'>
