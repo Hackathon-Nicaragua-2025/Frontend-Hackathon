@@ -37,13 +37,13 @@ export default function Home() {
       {/* Container Info */}
       <div>
         {/* Title */}
-        <h2 className="mx-2 mt-4 text-sm text-center text-[#0A2C22] lg:text-lg">
+        <h2 className="mx-2 mt-4 text-sm md:text-base text-center text-[#0A2C22] lg:text-lg">
           Protegiendo las aves, cuidando la naturaleza. <br />
           Descubre, Aprende y Visita con responsabilidad. <br />
           <span className="font-bold text-[#0D3C2F]">Naturaleza en Acción, ¡Se Parte Del Cambio!</span>
         </h2>
         {/* Text 2 Img*/}
-        <div className="flex items-center gap-8 mt-8 mx-2 text-xs text-justify text-[#0D3C2F] lg:w-3/4 lg:mx-auto lg:text-base">
+        <div className="flex items-center gap-8 mt-8 mx-2 text-xs text-justify text-[#0D3C2F] md:text-base lg:w-3/4 lg:mx-auto lg:text-base">
           <div className="w-1/2 mx-auto ">
             <p>
               Somos una comunidad dedicada a la conservation de aves y reservas naturales. Aquí encontraras información para aprender, cuidar y disfrutar de la naturaleza de forma segura.
@@ -57,7 +57,7 @@ export default function Home() {
           </div>
         </div>
         {/* Text 1 Img */}
-        <div className="flex items-center gap-8 mx-2 mt-8 text-xs text-justify text-[#0D3C2F] lg:w-3/4 lg:mx-auto lg:text-base">
+        <div className="flex items-center gap-8 mx-2 mt-8 text-xs text-justify text-[#0D3C2F] md:text-base lg:w-3/4 lg:mx-auto lg:text-base">
           <div className="w-1/3 mx-auto">
             <img src={Senderismo} alt="Senderismo" />
           </div>
