@@ -29,7 +29,7 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
 
   // Function Login
   const login = (role: Role) => {
-    setUser({ id: "1", name: "Bryan", email: "bryan@avify.com", role });
+    setUser({ id: "1", name: "Bryan Saenz", email: "bryan@avify.com", role });
   };
 
   // Function Logout

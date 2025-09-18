@@ -12,30 +12,30 @@ export const Nav = () => {
 
   return (
     // Container
-    <div className="flex justify-center gap-8 font-bold text-[#24496D]">
+    <div className="flex justify-center gap-4 font-bold">
       {/* Links */}
       <CustomLinks
         reference="/"
         label="Inicio"
-        className="cursor-pointer hover:text-[#0D3C2F] hover:underline transition-all duration-500 ease-in-out" />
+        className="cursor-pointer hover:text-primary-high hover:underline transition-all duration-500 ease-in-out" />
       <CustomLinks
         reference="/events"
         label="Eventos"
-        className="cursor-pointer hover:text-[#0D3C2F] hover:underline transition-all duration-500 ease-in-out" />
+        className="cursor-pointer hover:text-primary-high hover:underline transition-all duration-500 ease-in-out" />
       <CustomLinks
         reference="/education"
         label="Educación"
-        className="cursor-pointer hover:text-[#0D3C2F] hover:underline transition-all duration-500 ease-in-out" />
+        className="cursor-pointer hover:text-primary-high hover:underline transition-all duration-500 ease-in-out" />
       <CustomLinks
         reference={user?.role === "tourist" ? "/tourist/reservation" : ""}
         disabled={user?.role !== "tourist"}
         label="Reservas"
-        className="cursor-pointer hover:text-[#0D3C2F] hover:underline transition-all duration-500 ease-in-out" />
+        className="cursor-pointer hover:text-primary-high hover:underline transition-all duration-500 ease-in-out" />
       <CustomLinks
         reference={user?.role === "tourist" ? "/tourist/community" : ""}
         disabled={user?.role !== "tourist"}
         label="Comunidad"
-        className="cursor-pointer hover:text-[#0D3C2F] hover:underline transition-all duration-500 ease-in-out" />
+        className="cursor-pointer hover:text-primary-high hover:underline transition-all duration-500 ease-in-out" />
     </div>
   );
 }

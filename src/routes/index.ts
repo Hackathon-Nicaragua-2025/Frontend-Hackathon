@@ -4,6 +4,7 @@ import { lazy } from "react"
 export const Home = lazy(() => import("../pages/Home"))
 export const Events = lazy(() => import("../pages/Events"))
 export const Education = lazy(() => import("../pages/Education"))
+export const Community = lazy(() => import("../pages/Community"))
 export const QuizEducation = lazy(() => import("../pages/QuizEducation"))
 export const QuizEvents = lazy(() => import("../pages/QuizEvents"))
 export const QuizHome = lazy(() => import("../pages/QuizHome"))
