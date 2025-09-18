@@ -14,7 +14,7 @@ export const NavIcons = () => {
   const { user } = useAuth();
 
   return (
-    <div className="fixed flex justify-center w-full bottom-0 z-50 gap-8 py-4 bg-white">
+    <div className="fixed bottom-0 flex justify-center w-full gap-8 py-4 text-lg bg-white z-100">
       <CustomLinks
         reference="/"
         icon={<FaHome />} />

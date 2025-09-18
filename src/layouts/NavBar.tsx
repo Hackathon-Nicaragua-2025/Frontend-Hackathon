@@ -17,9 +17,9 @@ export const NavBar = () => {
 
   return (
     // Container
-    <div className="sticky top-0 z-100 flex justify-around items-center w-full py-4 bg-white">
+    <div className="sticky top-0 flex items-center justify-around w-full py-4 bg-white z-100">
       {/* Logo */}
-      <div className="flex items-center font-bold text-xl text-primary">
+      <div className="flex items-center text-xl font-bold text-primary">
         <img src={IconoNormal} alt="Icono Avify" className="w-12" />
         <h1 className="ml-2">Avify</h1>
       </div>
@@ -29,7 +29,7 @@ export const NavBar = () => {
       {!user && (
         <Button
           label="Iniciar Sesión"
-          className="px-4 py-1 rounded-lg text-sm text-white bg-primary cursor-pointer hover:bg-primary-high hover:scale-105 transition-all duration-500 ease-in-out"
+          className="px-4 py-1 text-sm text-white transition-all duration-500 ease-in-out rounded-lg cursor-pointer bg-primary hover:bg-primary-high hover:scale-105"
           onClick={() => login("tourist")}
         />
       )}
