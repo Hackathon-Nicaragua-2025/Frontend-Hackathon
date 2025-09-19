@@ -29,17 +29,17 @@ export const Profile = () => {
         className="text-3xl"
         onClick={toggleModal}
       />
-      <Modal openModal={modal} closeModal={toggleModal} style={{ position: 'fixed', right: '30px', top: 'calc(60px + 1rem)', width: 'fit-content', height: 'fit-content', padding: '2rem 1.5rem', borderRadius: '10px', backgroundColor: 'white', zIndex: 50 }}>
-        <h2 className="text-center font-bold">Perfil</h2>
-        <div className="flex justify-center items-center">
+      <Modal openModal={modal} closeModal={toggleModal} style={{ position: 'fixed', right: '30px', top: 'calc(60px + 1rem)', width: 'fit-content', height: 'fit-content', padding: '2rem 1.5rem', borderRadius: '10px', backgroundColor: 'white', zIndex: 15 }}>
+        <h2 className="font-bold text-center">Perfil</h2>
+        <div className="flex items-center justify-center">
           <BsPersonCircle className="text-2xl" />
         </div>
-        <p className="text-sm text-center my-1">{user?.name}</p>
-        <p className="text-sm text-center my-1">{user?.email}</p>
+        <p className="my-1 text-sm text-center">{user?.name}</p>
+        <p className="my-1 text-sm text-center">{user?.email}</p>
         <div>
           <Button
             label="Cerrar Sesión"
-            className="mt-2 px-4 py-1 rounded-lg text-sm text-white bg-primary cursor-pointer hover:bg-primary-high hover:scale-105 transition-all duration-500 ease-in-out"
+            className="px-4 py-1 mt-2 text-sm text-white transition-all duration-500 ease-in-out rounded-lg cursor-pointer bg-primary hover:bg-primary-high hover:scale-105"
             onClick={() => logout()}
           />
         </div>

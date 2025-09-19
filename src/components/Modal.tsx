@@ -1,4 +1,5 @@
 import { FaX } from "react-icons/fa6";
+import { createPortal } from "react-dom";
 
 // Interface
 interface ModalProps {
@@ -9,16 +10,18 @@ interface ModalProps {
 }
 
 export const Modal = ({ openModal, closeModal, children, style }: ModalProps) => {
-  return (
+  if (!openModal) return null;
+
+  return createPortal(
     // Container
-    <div className={openModal ? 'fixed' : 'hidden'}>
+    <div className="fixed inset-0 z-20">
       {/* BackDrop */}
-      <div className="fixed inset-0 z-10 bg-black/60" onClick={closeModal}></div>
+      <div className="absolute inset-0 z-0 bg-black/60" onClick={closeModal}></div>
       {/* Modal Container */}
-      <div style={style}>
+      <div className="relative z-10" style={style}>
         {/* Close Button */}
         <button
-          className="absolute top-4 right-4 cursor-pointer hover:scale-110 transition-all duration-500 ease-in-out"
+          className="absolute transition-all duration-500 ease-in-out cursor-pointer top-4 right-4 hover:scale-110"
           onClick={closeModal}
         >
           <FaX />
@@ -28,6 +31,7 @@ export const Modal = ({ openModal, closeModal, children, style }: ModalProps) =>
           {children}
         </div>
       </div>
-    </div >
+    </div>,
+    document.body
   );
 }

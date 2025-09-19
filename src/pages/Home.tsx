@@ -35,7 +35,7 @@ export default function Home() {
         />
       </div>
       {/* Container Info */}
-      <div>
+      <div className="relative">
         {/* Title */}
         <h2 className="mt-8 font-light text-center md:text-lg lg:text-xl">
           Protegiendo las aves, cuidando la naturaleza. <br />
@@ -69,19 +69,19 @@ export default function Home() {
         </div>
       </div>
       {/* Carousel */}
-      <div className="my-14 text-center font-bold text-[#0D3C2F]">
+      <div className="relative font-bold text-center my-14 text-primary-high">
         <div>
-          <h2 className="mb-4">Aves de Nicaragua</h2>
+          <h2 className="mb-2">Aves de Nicaragua</h2>
           <Carrusel
             avesProps={Aves}
-            className="w-4/5 mx-auto"
+            className="m-auto w-[80%]"
           />
         </div>
         <div className="mt-8">
-          <h2 className="mb-4">Reservas Naturales</h2>
+          <h2 className="mb-2">Reservas Naturales</h2>
           <CarruselReservas
             reservasProps={Reservas}
-            className="w-4/5 mx-auto"
+            className="m-auto w-[80%]"
           />
         </div>
       </div>

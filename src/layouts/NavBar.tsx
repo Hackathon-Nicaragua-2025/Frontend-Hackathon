@@ -17,7 +17,7 @@ export const NavBar = () => {
 
   return (
     // Container
-    <div className="sticky top-0 flex items-center justify-around w-full py-4 bg-white z-100">
+    <div className="sticky top-0 z-10 flex items-center justify-around w-full py-4 bg-white">
       {/* Logo */}
       <div className="flex items-center text-xl font-bold text-primary">
         <img src={IconoNormal} alt="Icono Avify" className="w-12" />

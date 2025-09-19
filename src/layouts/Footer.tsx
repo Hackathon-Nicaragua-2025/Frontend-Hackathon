@@ -7,7 +7,7 @@ import LogoNormal from "../assets/image/LogoNormal.svg";
 export const Footer = () => {
   return (
     // Footer
-    <footer className="flex flex-col justify-center items-center py-6 pb-16 bg-[#99B8B1] lg:pb-6">
+    <footer className="relative flex flex-col justify-center items-center py-6 pb-16 bg-[#99B8B1] lg:pb-6">
       {/* Logo */}
       <div className="mb-4 w-14">
         <img

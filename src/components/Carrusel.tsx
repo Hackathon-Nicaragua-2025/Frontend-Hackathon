@@ -9,8 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useMediaQuery } from "../hooks/mediaScreen";
 // Import For Types
 import type { CarouselProps, Reservas, Aves } from "../types/carrusel";
-// Import For React Icons
-import { FaX } from "react-icons/fa6";
+import { Modal } from "./Modal";
 
 // Component Carrusel
 export const Carrusel = ({ avesProps, className }: CarouselProps) => {
@@ -55,7 +54,7 @@ export const Carrusel = ({ avesProps, className }: CarouselProps) => {
   return (
     <div className={className}>
       {/* Container */}
-      <div className="-mx-4">
+      <div className="relative z-0">
         {/* Search Bar */}
         <div className="px-4 pb-4">
           <input
@@ -63,7 +62,7 @@ export const Carrusel = ({ avesProps, className }: CarouselProps) => {
             placeholder="Buscar ave por nombre..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-3 py-2 text-sm rounded-md border outline-none border-gray-300 lg:w-1/2 lg:mx-auto"
+            className="w-full px-3 py-1 text-sm border rounded-lg outline-none border-primary-low"
           />
         </div>
         {/* Slider */}
@@ -72,54 +71,27 @@ export const Carrusel = ({ avesProps, className }: CarouselProps) => {
             <button
               key={avesProp.id}
               onClick={() => openAveModalWith(avesProp)}
-              className="cursor-pointer px-4 rounded-lg hover:scale-110 transition-all duration-500 ease-in-out"
+              className="px-2 cursor-pointer"
             >
               <img
                 src={avesProp.fotografía} alt={avesProp.nombre_común}
-                className="w-full h-60 object-cover object-top rounded-lg"
+                className="object-cover object-top w-full rounded-lg h-60"
               />
             </button>
           ))}
         </Slider>
         {/* Modal Aves */}
-        <div className={openAveModal ? 'block' : 'hidden'}>
-          {/* Backdrop */}
-          <div
-            className="fixed inset-0 z-40 bg-black/60"
-            onClick={closeAveModal}
-          />
-          {/* Modal Container */}
-          <div
-            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 max-w-[50%] h-fit text-[#0A2C22] bg-[#9F9F9F] rounded-lg"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close button */}
-            <button
-              onClick={closeAveModal}
-              className="absolute top-8 right-8 cursor-pointer text-white hover:scale-110 transition-all duration-500 ease-in-out"
-            >
-              <FaX />
-            </button>
-            {/* Card */}
-            <div className="p-4">
-              <div className="mb-2">
-                <img
-                  src={selectedAve?.fotografía}
-                  alt={selectedAve?.nombre_común}
-                  className="w-full h-60 object-cover object-center rounded-lg lg:h-80"
-                />
-              </div>
-              <h2 className="text-center text-lg font-bold mb-2">{selectedAve?.nombre_común}</h2>
-              <div className="flex flex-col justify-center gap-1">
-                <p className="text-sm">Nombre Científico: {selectedAve?.nombre_científico}</p>
-                <p className="text-sm">Categoría: {selectedAve?.categoría}</p>
-              </div>
-              <p className="w-2/3 mx-auto my-6 text-xs mb-2 text-center">{selectedAve?.descripción}</p>
-              <p className="text-sm mb-2">
-                Distribución: {selectedAve?.distribución}</p>
-            </div>
+        <Modal openModal={openAveModal} closeModal={closeAveModal} style={{ position: 'fixed', left: 'calc(50%)', top: 'calc(50%)', transform: 'translateY(-50%) translateX(-50%)', width: '300px', height: 'fit-content', padding: '2rem 1.5rem', borderRadius: '10px', backgroundColor: 'white', zIndex: 15 }}>
+          <h2 className="mb-2 font-bold text-center text-primary">Aves de Nicaragua</h2>
+          <div className="w-full h-60">
+            <img src={selectedAve?.fotografía} alt={selectedAve?.nombre_común} className="object-cover object-top w-full rounded-lg h-60" />
           </div>
-        </div>
+          <p className="mt-2 text-center">{selectedAve?.nombre_común}</p>
+          <p className="text-xs text-center">{selectedAve?.nombre_científico}</p>
+          <p className="my-4 text-sm text-center">{selectedAve?.descripción}</p>
+          <p className="text-xs text-center">Categoría: {selectedAve?.categoría}</p>
+          <p className="text-xs text-center">Distribución: {selectedAve?.distribución}</p>
+        </Modal>
       </div>
     </div>
   );
@@ -166,69 +138,42 @@ export const CarruselReservas = ({ reservasProps, className }: CarouselProps) =>
 
   return (
     <div className={className}>
-      <div className="-mx-2 rounded-lg">
+      <div className="relative z-0">
         {/* Search Bar */}
-        <div className="px-2 pb-3">
+        <div className="px-4 pb-4">
           <input
             type="text"
             placeholder="Buscar reserva por nombre..."
             value={searchReserva}
             onChange={(e) => setSearchReserva(e.target.value)}
-            className="w-full px-3 py-2 text-sm rounded-md border outline-none border-gray-300 lg:w-1/2 lg:mx-auto"
+            className="w-full px-3 py-1 text-sm border rounded-lg outline-none border-primary-low"
           />
         </div>
         <Slider key={`${settings.slidesToShow}-${settings.slidesToScroll}`} {...settings}>
           {filteredReservas?.map((reservasProp) => (
-            <div key={reservasProp.id} className="px-2">
-              <button
-                onClick={() => openModalWith(reservasProp)}
-                className="cursor-pointer px-2 rounded-lg hover:scale-110 transition-all duration-500 ease-in-out"
-              >
-                <img
-                  src={reservasProp.fotografía} alt={reservasProp.nombre}
-                  className="w-full h-60 object-cover object-center rounded-lg"
-                />
-              </button>
-            </div>
+            <button
+              key={reservasProp.id}
+              onClick={() => openModalWith(reservasProp)}
+              className="px-2 cursor-pointer"
+            >
+              <img
+                src={reservasProp.fotografía} alt={reservasProp.nombre}
+                className="object-cover object-center w-full rounded-lg h-60"
+              />
+            </button>
           ))}
         </Slider>
-        {/* Modal */}
-        <div className={openModal ? 'block' : 'hidden'}>
-          {/* Backdrop */}
-          <div
-            className="fixed inset-0 z-40 bg-black/60"
-            onClick={closeModal}
-          />
-          {/* Modal Container */}
-          <div
-            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 max-w-[50%] h-fit text-[#0A2C22] bg-[#9F9F9F] rounded-lg"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close button */}
-            <button
-              onClick={closeModal}
-              className="absolute top-8 right-8 cursor-pointer text-white hover:scale-110 transition-all duration-500 ease-in-out"
-            >
-              <FaX />
-            </button>
-            {/* Content */}
-            <div className="p-4">
-              <div className="mb-2">
-                <img
-                  src={selectedReserva?.fotografía}
-                  alt={selectedReserva?.nombre}
-                  className="w-full h-60 object-cover object-center rounded-lg"
-                />
-              </div>
-              <h2 className="text-center text-lg font-bold mb-2">{selectedReserva?.nombre}</h2>
-              <div className="flex flex-col items-center justify-center gap-1 mb-2">
-                <p>Categoría: {selectedReserva?.categoría}</p>
-                <p>Ubicación: Zona {selectedReserva?.ubicación}</p>
-              </div>
-              <p className="mx-4 my-2 text-sm text-center">{selectedReserva?.descripción}</p>
-            </div>
+        {/* Modal Reservas */}
+        <Modal openModal={openModal} closeModal={closeModal} style={{ position: 'fixed', left: 'calc(50%)', top: 'calc(50%)', transform: 'translateY(-50%) translateX(-50%)', width: '300px', height: 'fit-content', padding: '2rem 1.5rem', borderRadius: '10px', backgroundColor: 'white', zIndex: 15 }}>
+          <h2 className="mb-2 font-bold text-center text-primary">Reservas de Nicaragua</h2>
+          <div className="w-full h-60">
+            <img src={selectedReserva?.fotografía} alt={selectedReserva?.nombre} className="object-cover object-center w-full rounded-lg h-60" />
           </div>
-        </div>
+          <p className="mt-2 text-center">{selectedReserva?.nombre}</p>
+          <p className="my-4 text-center">{selectedReserva?.descripción}</p>
+          <p className="text-center">Categoría: {selectedReserva?.categoría}</p>
+          <p className="text-center">Ubicación: {selectedReserva?.ubicación}</p>
+        </Modal>
       </div>
     </div >
   );
