@@ -56,7 +56,7 @@ export const Carrusel = ({ avesProps, className }: CarouselProps) => {
       {/* Container */}
       <div className="relative z-0">
         {/* Search Bar */}
-        <div className="px-4 pb-4">
+        <div className="px-4 pb-4 md:w-1/2 md:m-auto">
           <input
             type="text"
             placeholder="Buscar ave por nombre..."
@@ -140,7 +140,7 @@ export const CarruselReservas = ({ reservasProps, className }: CarouselProps) =>
     <div className={className}>
       <div className="relative z-0">
         {/* Search Bar */}
-        <div className="px-4 pb-4">
+        <div className="px-4 pb-4 md:w-1/2 md:m-auto">
           <input
             type="text"
             placeholder="Buscar reserva por nombre..."
