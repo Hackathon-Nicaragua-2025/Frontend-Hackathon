@@ -25,11 +25,11 @@ export const NavIcons = () => {
         reference="/education"
         icon={<FaGraduationCap />} />
       <CustomLinks
-        reference="/reservation"
+        reference="/tourist/reservation"
         disabled={user?.role !== "tourist"}
         icon={<FaTicket />} />
       <CustomLinks
-        reference="/community"
+        reference="/tourist/community"
         disabled={user?.role !== "tourist"}
         icon={<FaUsers />} />
     </div>

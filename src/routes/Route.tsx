@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom"
 // Import For components
 import { PrivateRoute } from "../components"
 // Import For Pages
-import { Home, Events, Privacy, Conditions, Education, QuizEducation, QuizEvents, QuizHome, Community } from "./index"
+import { Home, Events, Privacy, Conditions, Education, QuizEducation, QuizEvents, QuizHome, Community, Reservations } from "./index"
 
 
 // Interface Route
@@ -33,18 +33,24 @@ export const routes: Route[] = [
     element: <QuizEducation />,
   },
   {
-    path: "/tourist/community",
-    element: <PrivateRoute role="tourist">
-      <Community />
-    </PrivateRoute>,
-  },
-  {
     path: "/quiz/events",
     element: <QuizEvents />,
   },
   {
     path: "/quiz/home",
     element: <QuizHome />,
+  },
+  {
+    path: "/tourist/reservation",
+    element: <PrivateRoute role="tourist">
+      <Reservations />
+    </PrivateRoute>,
+  },
+  {
+    path: "/tourist/community",
+    element: <PrivateRoute role="tourist">
+      <Community />
+    </PrivateRoute>,
   },
   {
     path: "/privacy",

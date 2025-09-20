@@ -1,4 +1,5 @@
 export * from './Calendar'
+export * from './Card'
 export * from './nav/Nav'
 export * from './Button'
 export * from './Carrusel'

@@ -17,25 +17,25 @@ export const Nav = () => {
       <CustomLinks
         reference="/"
         label="Inicio"
-        className="cursor-pointer hover:text-primary-high hover:underline transition-all duration-500 ease-in-out" />
+        className="transition-all duration-500 ease-in-out cursor-pointer hover:text-primary-high hover:underline" />
       <CustomLinks
         reference="/events"
         label="Eventos"
-        className="cursor-pointer hover:text-primary-high hover:underline transition-all duration-500 ease-in-out" />
+        className="transition-all duration-500 ease-in-out cursor-pointer hover:text-primary-high hover:underline" />
       <CustomLinks
         reference="/education"
         label="Educación"
-        className="cursor-pointer hover:text-primary-high hover:underline transition-all duration-500 ease-in-out" />
+        className="transition-all duration-500 ease-in-out cursor-pointer hover:text-primary-high hover:underline" />
       <CustomLinks
         reference={user?.role === "tourist" ? "/tourist/reservation" : ""}
         disabled={user?.role !== "tourist"}
         label="Reservas"
-        className="cursor-pointer hover:text-primary-high hover:underline transition-all duration-500 ease-in-out" />
+        className="transition-all duration-500 ease-in-out cursor-pointer hover:text-primary-high hover:underline" />
       <CustomLinks
         reference={user?.role === "tourist" ? "/tourist/community" : ""}
         disabled={user?.role !== "tourist"}
         label="Comunidad"
-        className="cursor-pointer hover:text-primary-high hover:underline transition-all duration-500 ease-in-out" />
+        className="transition-all duration-500 ease-in-out cursor-pointer hover:text-primary-high hover:underline" />
     </div>
   );
 }

@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "title": "Reserva Natural Volcán Mombacho",
+    "department": "Granada",
+    "activities": [
+      "Senderismo",
+      "Avistamiento de aves",
+      "Visitas guiadas",
+      "Fotografía de naturaleza"
+    ],
+    "stars": 5,
+    "img": "https://i.pinimg.com/1200x/a9/a6/c0/a9a6c0d00f032b88000df867c514e609.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Reserva Biológica Indio Maíz",
+    "department": "Río San Juan",
+    "activities": [
+      "Ecoturismo",
+      "Observación de fauna",
+      "Caminatas",
+      "Turismo científico"
+    ],
+    "stars": 5,
+    "img": "https://ondalocalni.com/media/articles/portada_5.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Reserva Natural Miraflor",
+    "department": "Estelí",
+    "activities": [
+      "Agroturismo",
+      "Turismo comunitario",
+      "Cabalgatas",
+      "Observación de orquídeas"
+    ],
+    "stars": 4,
+    "img": "https://i.pinimg.com/736x/df/d5/f1/dfd5f1737184d998966de052d9bb62a5.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Reserva Natural Cerro Negro",
+    "department": "León",
+    "activities": [
+      "Sandboarding",
+      "Senderismo",
+      "Geoturismo",
+      "Fotografía de paisajes"
+    ],
+    "stars": 4,
+    "img": "https://i.pinimg.com/1200x/39/3d/96/393d96032391a63baf94d639c2ab8213.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Reserva Natural Macizos de Peñas Blancas",
+    "departamento": "Jinotega",
+    "actividades": [
+      "Camping",
+      "Senderismo",
+      "Avistamiento de aves",
+      "Visitas a cascadas"
+    ],
+    "calificacion": 5,
+    "fotografia": "https://i.pinimg.com/1200x/d7/ba/96/d7ba96c48ce5ae681dfa6c7311fc239b.jpg"
+  }
+]
