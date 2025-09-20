@@ -7,8 +7,8 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import moment from 'moment';
 // Import For Types
 import type { CalendarEvent } from '../types/calendars';
-// Import For Icons
-import { FaX } from 'react-icons/fa6';
+// Import For Components
+import { Modal } from './Modal';
 
 // Interface Calendar Props
 interface CalendarProps {
@@ -39,7 +39,7 @@ export const CalendarComponent = ({ events }: CalendarProps) => {
   };
 
   return (
-    <div className='w-full h-[80dvh] overflow-y-auto mb-4 md:w-3/4 lg:w-2/3'>
+    <div className='w-full h-[80dvh] overflow-y-auto mx-auto mb-4 md:w-3/4 lg:w-2/3'>
       <Calendar
         localizer={localizer}
         events={events}
@@ -65,47 +65,20 @@ export const CalendarComponent = ({ events }: CalendarProps) => {
         }}
       />
       {/* Modal */}
-      <div className={openEventModal ? 'block' : 'hidden'}>
-        {/* Backdrop */}
-        <div
-          className="fixed inset-0 z-40 bg-black/60"
-          onClick={closeEventModal}
-        />
-        {/* Modal Container */}
-        <div
-          className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 max-w-[90%] w-[680px] h-fit text-[#0A2C22] bg-[#9F9F9F] rounded-lg"
-          onClick={(e) => e.stopPropagation()}
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="event-modal-title"
-        >
-          {/* Close button */}
-          <button
-            onClick={closeEventModal}
-            className="absolute top-4 right-4 cursor-pointer text-white hover:scale-110 transition-all duration-300 ease-in-out"
-            aria-label="Cerrar"
-          >
-            <FaX />
-          </button>
-          {/* Content */}
-          <div className="p-5">
-            <h2 id="event-modal-title" className="text-center text-xl font-bold mb-3 text-[#0A2C22]">
-              {selectedEvent?.title}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4 text-sm">
-              <p><span className="font-semibold">Categoría:</span> {selectedEvent?.categoría}</p>
-              <p><span className="font-semibold">Ave relacionada:</span> {selectedEvent?.ave_relacionada}</p>
-              <p><span className="font-semibold">Ubicación:</span> {selectedEvent?.ubicación}</p>
-              <p>
-                <span className="font-semibold">Fecha:</span> {selectedEvent ? `${selectedEvent.start.toLocaleDateString()} - ${selectedEvent.end.toLocaleDateString()}` : ''}
-              </p>
-            </div>
-            <p className="text-sm leading-relaxed">
-              {selectedEvent?.descripción}
-            </p>
-          </div>
+      <Modal openModal={openEventModal} closeModal={closeEventModal} style={{ position: 'fixed', left: 'calc(50%)', top: 'calc(50%)', transform: 'translateY(-50%) translateX(-50%)', width: '300px', height: 'fit-content', padding: '2rem 1.5rem', borderRadius: '10px', backgroundColor: 'white', zIndex: 15 }}>
+        <h2 className="mb-2 font-bold text-center text-primary">{selectedEvent?.title}</h2>
+        <h3 className="my-2 text-sm">
+          <span className='font-bold'>
+            Ave Relacionada:
+          </span>
+          <br />
+          {selectedEvent?.ave_relacionada}</h3>
+        <p className='text-sm text-justify'>{selectedEvent?.descripción}</p>
+        <div className='flex flex-col gap-2 my-2'>
+          <p> <span className='font-bold'>Categoría:</span> {selectedEvent?.categoría}</p>
+          <p> <span className='font-bold'>Ubicación:</span> {selectedEvent?.ubicación}</p>
         </div>
-      </div>
-    </div>
+      </Modal>
+    </div >
   )
 }

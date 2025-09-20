@@ -38,14 +38,14 @@ export default function Education() {
 			{/* NavBar */}
 			<NavBar />
 			{/* Title */}
-			<p className="mx-4 mt-8 text-center md:w-1/2 md:mx-auto">
+			<p className="w-2/3 mx-4 mt-8 text-center md:mx-auto text-primary">
 				Tomar en cuenta esta indicaciones es fundamentar para proteger la riqueza natural de Nicaragua, especialmente sus a ves y reservas ecológicas, que son el hogar de especies únicas y ecosistemas frágiles.
 			</p>
 			{/* Cuido de las Aves */}
 			<div>
-				<h3 className="text-center font-bold mt-8">Cuido de las Aves</h3>
-				<div className="relative lg:w-[65%] lg:mx-auto">
-					<img src={ÁrbolMadroño} alt="Árbol Madroño" />
+				<h3 className="mt-8 font-bold text-center">Cuido de las Aves</h3>
+				<div className="relative lg:w-[80%] lg:mx-auto">
+					<img src={ÁrbolMadroño} alt="Árbol Madroño" className="lg:shadow-lg lg:rounded-2xl lg:shadow-amber-950" />
 					<Marcadores
 						id={1}
 						description="Apoya reservas y proyectos de conservacion locales"
@@ -104,16 +104,16 @@ export default function Education() {
 			</div>
 			{/* Cuido de las Reservas Naturales */}
 			<div>
-				<h3 className="text-center font-bold mt-12 mb-4">Cuido de las Reservas Naturales</h3>
+				<h3 className="mb-4 font-bold text-center mt-14">Cuido de las Reservas Naturales</h3>
 				<div className="mx-4 lg:w-[80%] lg:mx-auto">
 					<div className="flex items-center justify-center gap-4">
-						<div className="hidden md:block w-1/4">
+						<div className="hidden w-1/4 md:block">
 							<img
 								src={NoBotarBasura}
 								alt="No botar basura"
 							/>
 						</div>
-						<p className="flex flex-col gap-2 text-sm mt-4 md:w-1/2">
+						<p className="flex flex-col gap-2 mt-4 text-sm md:w-1/2">
 							<span className="font-bold">
 								No dejes basura 🗑️:
 							</span>
@@ -121,13 +121,13 @@ export default function Education() {
 						</p>
 					</div>
 					<div className="flex items-center justify-center gap-4">
-						<p className="flex flex-col gap-2 text-sm mt-4 md:w-1/2">
+						<p className="flex flex-col gap-2 mt-4 text-sm md:w-1/2">
 							<span className="font-bold">
 								No hagas fogatas fuera de las zonas autorizadas 🌋:
 							</span>
 							El fuego puede causar incendios forestales y dañar la biodiversidad.
 						</p>
-						<div className="hidden md:block w-1/4">
+						<div className="hidden w-1/4 md:block">
 							<img
 								src={NoHacerFogatas}
 								alt="No hacer fogatas"
@@ -135,13 +135,13 @@ export default function Education() {
 						</div>
 					</div>
 					<div className="flex items-center justify-center gap-4">
-						<div className="hidden md:block w-1/4">
+						<div className="hidden w-1/4 md:block">
 							<img
 								src={SenderosMarcados}
 								alt="Senderos marcados"
 							/>
 						</div>
-						<p className="flex flex-col gap-2 text-sm mt-4 md:w-1/2">
+						<p className="flex flex-col gap-2 mt-4 text-sm md:w-1/2">
 							<span className="font-bold">
 								Respeta los senderos marcados 🏕️:
 							</span>
@@ -149,13 +149,13 @@ export default function Education() {
 						</p>
 					</div>
 					<div className="flex items-center justify-center gap-4">
-						<p className="flex flex-col gap-2 text-sm mt-4 md:w-1/2">
+						<p className="flex flex-col gap-2 mt-4 text-sm md:w-1/2">
 							<span className="font-bold">
 								Participa en actividades de reforestación 🌳:
 							</span>
 							Ayuda a restaurar áreas dañadas y promueve la biodiversidad.
 						</p>
-						<div className="hidden md:block w-1/4">
+						<div className="hidden w-1/4 md:block">
 							<img
 								src={Reforestación}
 								alt="Reforestación"
@@ -163,13 +163,13 @@ export default function Education() {
 						</div>
 					</div>
 					<div className="flex items-center justify-center gap-4">
-						<div className="hidden md:block w-1/4">
+						<div className="hidden w-1/4 md:block">
 							<img
 								src={ApoyarAlEcotourismo}
 								alt="Apoyar al ecotourismo"
 							/>
 						</div>
-						<p className="flex flex-col gap-2 text-sm mt-4 md:w-1/2">
+						<p className="flex flex-col gap-2 mt-4 text-sm md:w-1/2">
 							<span className="font-bold">
 								Apoyar el ecotourismo responsable 🌍:
 							</span>
@@ -180,7 +180,7 @@ export default function Education() {
 			</div>
 			{/* Educación y Conciencia */}
 			{/* Video */}
-			<h3 className="text-center font-bold mt-8 mb-4">Conoce del Aviturismo en este video</h3>
+			<h3 className="mt-8 mb-4 font-bold text-center">Conoce del Aviturismo en este video</h3>
 			<div className="mx-4 aspect-[16/9] md:w-1/2 md:mx-auto lg:w-1/2 lg:mx-auto">
 				<iframe
 					className="w-full h-full"
@@ -190,16 +190,16 @@ export default function Education() {
 				></iframe>
 			</div>
 			<div className="mx-4">
-				<h3 className="text-center font-bold mt-12 mb-4">Educación y Conciencia</h3>
+				<h3 className="mt-12 mb-4 font-bold text-center">Educación y Conciencia</h3>
 				<div className="flex flex-col gap-4">
 					<div className="flex items-center justify-center gap-4">
-						<p className="flex flex-col gap-2 text-sm mt-4 md:w-1/2">
+						<p className="flex flex-col gap-2 mt-4 text-sm md:w-1/2">
 							<span className="font-bold">
 								Comparte tus experiencias 📸:
 							</span>
 							Documenta tus visitas y comparte tus impresiones en redes sociales para educar a otros y generar conciencia.
 						</p>
-						<div className="hidden md:block w-1/4">
+						<div className="hidden w-1/4 md:block">
 							<img
 								src={ComparteExperiencias}
 								alt="Comparte tus experiencias"
@@ -208,13 +208,13 @@ export default function Education() {
 						</div>
 					</div>
 					<div className="flex items-center justify-center gap-4">
-						<p className="flex flex-col gap-2 text-sm mt-4 md:w-1/2">
+						<p className="flex flex-col gap-2 mt-4 text-sm md:w-1/2">
 							<span className="font-bold">
 								Involucrate en campañas de conciencia 🌍:
 							</span>
 							Apoya iniciativas locales que promuevan la protección de las reservas naturales.
 						</p>
-						<div className="hidden md:block w-1/4">
+						<div className="hidden w-1/4 md:block">
 							<img
 								src={CampañasDeConciencia}
 								alt="Campañas de Conciencia"
@@ -223,13 +223,13 @@ export default function Education() {
 						</div>
 					</div>
 					<div className="flex items-center justify-center gap-4">
-						<p className="flex flex-col gap-2 text-sm mt-4 md:w-1/2">
+						<p className="flex flex-col gap-2 mt-4 text-sm md:w-1/2">
 							<span className="font-bold">
 								Reporta actividades ilegales 📝:
 							</span>
 							Si notas actividades ilegales, como la caza de aves o la destrucción de reservas naturales, reporta a las autoridades locales.
 						</p>
-						<div className="hidden md:block w-1/4">
+						<div className="hidden w-1/4 md:block">
 							<img
 								src={ActividadesIlegales}
 								alt="Actividades Ilegales"
@@ -240,12 +240,12 @@ export default function Education() {
 				</div>
 			</div >
 			{/* Quiz */}
-			<h3 className="text-center font-bold mt-12 mb-4">Selecciona un Quiz de alguna de nuestras secciones.</h3>
+			<h3 className="mt-12 mb-4 font-bold text-center">Selecciona un Quiz de alguna de nuestras secciones.</h3>
 			<div className="flex flex-col items-center gap-4 my-8 lg:flex-row lg:justify-center">
 				<div>
 					<Link
 						to="/quiz/education"
-						className="inline-block px-5 py-2 rounded bg-[#0D3C2F] text-white hover:opacity-90"
+						className="inline-block px-5 py-2 text-white rounded bg-primary hover:opacity-90"
 					>
 						Hacer el Quiz de Educación
 					</Link>
@@ -253,7 +253,7 @@ export default function Education() {
 				<div>
 					<Link
 						to="/quiz/events"
-						className="inline-block px-5 py-2 rounded bg-[#1159CE] text-white hover:opacity-90"
+						className="inline-block px-5 py-2 text-white rounded bg-secondary hover:opacity-90"
 					>
 						Hacer el Quiz de Eventos
 					</Link>
@@ -261,7 +261,7 @@ export default function Education() {
 				<div>
 					<Link
 						to="/quiz/home"
-						className="inline-block px-5 py-2 rounded bg-[#0D3C2F] text-white hover:opacity-90"
+						className="inline-block px-5 py-2 text-white rounded bg-tertiary hover:opacity-90"
 					>
 						Hacer el Quiz de Inicio
 					</Link>

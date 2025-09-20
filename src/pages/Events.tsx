@@ -7,7 +7,8 @@ import { Footer, NavBar } from "../layouts";
 // Import For Components
 import { NavIcons, CalendarComponent } from "../components";
 // Import For Types
-import type { CalendarEvent, RawEvent } from "../types/calendars";
+import type { CalendarEvent, RawEvent, } from "../types/calendars";
+
 // Import For Json
 import { Eventos } from "../json";
 
@@ -34,11 +35,11 @@ export default function Events() {
 		<>
 			{/* NavBar */}
 			<NavBar />
-			<h2 className='mt-8 mx-8 text-center font-bold text-[#30D3C2F] md:w-3/4 md:mx-auto lg:w-2/3 lg:mx-auto'>
+			<h2 className='mx-4 mt-8 font-bold text-center text-primary md:w-2/3 md:mx-auto'>
 				En esta sección encontraras eventos que ocurren en el territorio nicaragüense. tales como avistamientos de aves, migraciones, festividades locales y otros eventos relevantes.
 			</h2>
-			<div className='flex flex-col items-center justify-center gap-4 mt-8'>
-				<p className='mx-8 text-center text-[#3F6C5E] md:w-3/4 md:mx-auto'>
+			<div className='flex flex-col justify-center gap-4 mt-8'>
+				<p className='mx-8 text-center text-primary-low md:w-2/3 md:mx-auto'>
 					¡Explora el calendario! Solo selecciona una fecha con un evento y conoce los detalles.
 				</p>
 				<CalendarComponent events={typedEvents} />

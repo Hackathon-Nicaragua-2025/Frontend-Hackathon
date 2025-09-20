@@ -20,7 +20,7 @@ export const Marcadores = ({ id, description, y, x, icon, isOpen, onSelect }: Ma
 
   return (
     <>
-      <div className={"absolute cursor-pointer flex items-center justify-center p-2 rounded-full text-2xl  text-black bg-amber-300 hover:bg-amber-800 transition duration-500 ease-in-out"}
+      <div className={"absolute cursor-pointer flex items-center justify-center p-2 rounded-full text2xl bg-amber-300"}
         style={isMobile ? { top: y, left: x } : isTablet ? { top: y + 100, left: x + 200 } : { top: y + 80, left: x + 150 }}>
         {/* Button */}
         <button onClick={() => onSelect(id)} aria-expanded={isOpen} aria-controls={`marker-desc-${id}`}>
