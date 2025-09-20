@@ -1,9 +1,11 @@
-import type { QuizData } from '../../types/quiz';
+// Import For Types
+import type { QuizData } from '../types/quiz';
 
+// Export For Quiz
 export const homeQuiz: QuizData = {
   id: 'home',
   title: 'Quiz: Avify y Conservación',
-  description: 'Repasa los mensajes clave de la página de inicio.',
+  description: 'Repasa los mensajes clave de la página.',
   questions: [
     {
       id: 'q1',

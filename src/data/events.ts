@@ -1,9 +1,11 @@
-import type { QuizData } from '../../types/quiz';
+// Import For Types
+import type { QuizData } from '../types/quiz';
 
+// Export For Quiz
 export const eventsQuiz: QuizData = {
   id: 'events',
   title: 'Quiz: Eventos y Avistamientos',
-  description: 'Comprueba tu conocimiento sobre los eventos del calendario.',
+  description: 'Comprueba tu conocimiento sobre los eventos.',
   questions: [
     {
       id: 'q1',

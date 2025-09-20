@@ -9,15 +9,20 @@ import { Quiz } from "../components/Quiz";
 import { educationQuiz } from "../data/quizzes/education";
 
 export default function QuizEducation() {
+  // Media Query
   const isTablet = useMediaQuery("(max-width: 768px)");
 
   return (
     <>
+      {/* Navbar */}
       <NavBar />
+      {/* Quiz */}
       <div className="my-6">
         <Quiz quiz={educationQuiz} />
       </div>
+      {/* Footer */}
       <Footer />
+      {/* Icons */}
       {isTablet ? <NavIcons /> : ""}
     </>
   );

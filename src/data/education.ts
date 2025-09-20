@@ -1,5 +1,7 @@
-import type { QuizData } from '../../types/quiz';
+// Import For Types
+import type { QuizData } from '../types/quiz';
 
+// Export For Quiz
 export const educationQuiz: QuizData = {
   id: 'education',
   title: 'Quiz: Educación y Conservación',
