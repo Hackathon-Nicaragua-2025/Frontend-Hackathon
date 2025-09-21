@@ -1,4 +1,5 @@
 // Import For React Icons
+import { useNavigate } from "react-router-dom";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 // Interface Card Props
@@ -18,6 +19,7 @@ interface Card {
 
 // Component Cards
 export const Cards = ({ cardProp }: { cardProp: CardProps }) => {
+  const navigate = useNavigate();
   // Star Function
   const clampStars = (n: number) => Math.max(0, Math.min(5, Math.round(n)));
 
@@ -73,7 +75,11 @@ export const Cards = ({ cardProp }: { cardProp: CardProps }) => {
                   </div>
                 )}
                 <div className="pt-2">
-                  <button className="w-full px-4 py-2 text-sm font-medium text-white rounded-xl bg-primary hover:opacity-90">
+                  <button
+                    type="button"
+                    onClick={() => navigate(`/tourist/reservation/${card.id}`)}
+                    className="w-full px-4 py-2 text-sm font-medium text-white rounded-xl bg-primary hover:opacity-90"
+                  >
                     Reservar
                   </button>
                 </div>

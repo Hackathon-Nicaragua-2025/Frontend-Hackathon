@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom"
 // Import For components
 import { PrivateRoute } from "../components"
 // Import For Pages
-import { Home, Events, Privacy, Conditions, Education, QuizEducation, QuizEvents, QuizHome, Community, Reservations } from "./index"
+import { Home, Events, Privacy, Conditions, Education, QuizEducation, QuizEvents, QuizHome, Community, Reservations, ReservationForm } from "./index"
 
 
 // Interface Route
@@ -44,6 +44,12 @@ export const routes: Route[] = [
     path: "/tourist/reservation",
     element: <PrivateRoute role="tourist">
       <Reservations />
+    </PrivateRoute>,
+  },
+  {
+    path: "/tourist/reservation/:id",
+    element: <PrivateRoute role="tourist">
+      <ReservationForm />
     </PrivateRoute>,
   },
   {

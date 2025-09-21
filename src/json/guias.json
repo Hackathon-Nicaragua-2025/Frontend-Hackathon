@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nombre": "Carlos López",
+    "departamento": "Granada",
+    "horarios": "Lunes a Sábado, 8:00 AM - 5:00 PM",
+    "calificacion": 5,
+    "fotografia": "https://randomuser.me/api/portraits/men/32.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "María Fernanda Gutiérrez",
+    "departamento": "León",
+    "horarios": "Martes a Domingo, 7:00 AM - 4:00 PM",
+    "calificacion": 4,
+    "fotografia": "https://randomuser.me/api/portraits/women/45.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "José Antonio Martínez",
+    "departamento": "Rivas",
+    "horarios": "Todos los días, 9:00 AM - 6:00 PM",
+    "calificacion": 5,
+    "fotografia": "https://randomuser.me/api/portraits/men/55.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Lucía Hernández",
+    "departamento": "Jinotega",
+    "horarios": "Viernes a Lunes, 6:30 AM - 3:00 PM",
+    "calificacion": 4,
+    "fotografia": "https://randomuser.me/api/portraits/women/62.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Miguel Ángel Torres",
+    "departamento": "Chinandega",
+    "horarios": "Miércoles a Domingo, 8:00 AM - 5:30 PM",
+    "calificacion": 5,
+    "fotografia": "https://randomuser.me/api/portraits/men/71.jpg"
+  }
+]
