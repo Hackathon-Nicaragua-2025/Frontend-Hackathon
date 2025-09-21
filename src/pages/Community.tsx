@@ -56,7 +56,7 @@ export default function Community() {
 				notes={notes}
 			/>
 			<Valoraciones
-				name="Alex"
+				name="Lucas"
 				department=" Carazo"
 			/>
 			{/* Footer */}
