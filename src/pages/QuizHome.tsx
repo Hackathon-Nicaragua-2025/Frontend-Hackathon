@@ -6,7 +6,7 @@ import { NavBar, Footer } from "../layouts";
 import { NavIcons } from "../components";
 import { Quiz } from "../components/Quiz";
 // Import For Data
-import { homeQuiz } from "../data/quizzes/home";
+import { homeQuiz } from "../data/home";
 
 export default function QuizHome() {
   const isTablet = useMediaQuery("(max-width: 768px)");

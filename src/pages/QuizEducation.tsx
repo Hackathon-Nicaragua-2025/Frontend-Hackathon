@@ -6,7 +6,7 @@ import { NavBar, Footer } from "../layouts";
 import { NavIcons } from "../components";
 import { Quiz } from "../components/Quiz";
 // Import For Data
-import { educationQuiz } from "../data/quizzes/education";
+import { educationQuiz } from "../data/education";
 
 export default function QuizEducation() {
   // Media Query
