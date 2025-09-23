@@ -46,9 +46,9 @@ export default function Events() {
 					{/* Legend */}
 					<div aria-label="Leyenda de categorías" className='flex flex-wrap items-center justify-center gap-4 mx-4 mt-2 text-sm'>
 						<div className='flex items-center gap-2'><span aria-hidden className='inline-block w-3 h-3 rounded' style={{ backgroundColor: '#0D3C2F' }}></span><span>Avistamiento</span></div>
-						<div className='flex items-center gap-2'><span aria-hidden className='inline-block w-3 h-3 rounded' style={{ backgroundColor: '#1159CE' }}></span><span>Evento Especial</span></div>
+						<div className='flex items-center gap-2'><span aria-hidden className='inline-block w-3 h-3 rounded' style={{ backgroundColor: '#2B589D' }}></span><span>Evento Especial</span></div>
 						<div className='flex items-center gap-2'><span aria-hidden className='inline-block w-3 h-3 rounded' style={{ backgroundColor: '#0A6646' }}></span><span>Ciencia Ciudadana</span></div>
-						<div className='flex items-center gap-2'><span aria-hidden className='inline-block w-3 h-3 rounded' style={{ backgroundColor: '#1159CE' }}></span><span>Evento Cultural</span></div>
+						<div className='flex items-center gap-2'><span aria-hidden className='inline-block w-3 h-3 rounded' style={{ backgroundColor: '#007ACC' }}></span><span>Evento Cultural</span></div>
 					</div>
 					<CalendarComponent events={typedEvents} />
 				</div>

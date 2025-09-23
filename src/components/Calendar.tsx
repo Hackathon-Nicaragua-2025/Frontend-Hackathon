@@ -79,13 +79,25 @@ export const CalendarComponent = ({ events }: CalendarProps) => {
             padding: "4px 8px",
             borderRadius: "8px",
             color: "white",
-            backgroundColor: event.categoría.includes("Avistamiento") ? "#0D3C2F" : event.categoría.includes("Evento Especial") ? "#1159CE" : event.categoría.includes("Ciencia Ciudadana") ? "#0A6646" : event.categoría.includes("Evento Cultural") ? "#1159CE" : "#1159CE",
+            backgroundColor: event.categoría.includes("Avistamiento") ? "#0D3C2F" : event.categoría.includes("Evento Especial") ? "#2B589D" : event.categoría.includes("Ciencia Ciudadana") ? "#0A6646" : event.categoría.includes("Evento Cultural") ? "#007ACC" : "#1159CE",
           };
           return { style };
         }}
       />
       {/* Modal */}
-      <Modal openModal={openEventModal} closeModal={closeEventModal} style={{ position: 'fixed', left: 'calc(50%)', top: 'calc(50%)', transform: 'translateY(-50%) translateX(-50%)', width: '300px', height: 'fit-content', padding: '2rem 1.5rem', borderRadius: '10px', backgroundColor: 'white', zIndex: 15 }} ariaLabelledBy="event-title">
+      <Modal openModal={openEventModal} closeModal={closeEventModal} style={{ position: 'fixed', 
+    left: '50%', 
+    top: '50%', 
+    transform: 'translate(-50%, -50%)', 
+    width: '90%', 
+    maxWidth: '500px',
+    maxHeight: '90vh',
+    overflowY: 'auto',
+    padding: '1.5rem',
+    borderRadius: '12px',
+    backgroundColor: 'white', 
+    boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
+    zIndex: 50  }} ariaLabelledBy="event-title">
         <h2 id="event-title" className="mb-2 font-bold text-center text-primary">{selectedEvent?.title}</h2>
         <h3 className="my-2 text-sm">
           <span className='font-bold'>

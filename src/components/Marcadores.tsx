@@ -20,21 +20,34 @@ export const Marcadores = ({ id, description, y, x, icon, isOpen, onSelect }: Ma
 
   return (
     <>
-      <div className={"absolute cursor-pointer flex items-center justify-center p-2 rounded-full text2xl bg-amber-300"}
+      <div
+        className={`absolute cursor-pointer flex items-center justify-center p-2 rounded-full text-2xl transition-all duration-300 ${isOpen ? 'bg-amber-400 scale-110' : 'bg-amber-300 hover:bg-amber-400'
+          }`}
         style={isMobile ? { top: y, left: x } : isTablet ? { top: y + 100, left: x + 200 } : { top: y + 100, left: x + 250 }}>
-        {/* Button */}
-        <button onClick={() => onSelect(id)} aria-expanded={isOpen} aria-controls={`marker-desc-${id}`}>
+        <button
+          onClick={() => onSelect(id)}
+          aria-expanded={isOpen}
+          aria-controls={`marker-desc-${id}`}
+          className="rounded-full focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2"
+        >
           {icon}
         </button>
-        {/* Description */}
         <div
           id={`marker-desc-${id}`}
-          className={`absolute w-32 z-50 bg-white rounded-2xl p-4 ${isOpen ? 'block' : 'hidden'}`}
-          style={{ top: 50, left: -20 }}
+          className={`absolute z-50 bg-white rounded-xl p-4 shadow-lg transition-all duration-300 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+            }`}
+          style={{
+            top: 'calc(100% + 10px)',
+            left: '50%',
+            transform: isOpen ? 'translateX(-50%)' : 'translateX(-50%) scale(0.95)',
+            minWidth: '200px',
+            maxWidth: '250px'
+          }}
         >
-          <p className="text-sm">{description}</p>
+          <p className="text-sm text-gray-700">{description}</p>
         </div>
       </div>
+
     </>
   )
 }
