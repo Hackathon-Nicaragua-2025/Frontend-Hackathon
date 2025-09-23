@@ -1,5 +1,5 @@
 // Import For React
-import { useState } from "react";
+import { useRef, useState } from "react";
 // Import For React Slick
 import Slider from "react-slick";
 // Import For React Slick Styles 
@@ -16,11 +16,14 @@ export const Carrusel = ({ avesProps, className }: CarouselProps) => {
   // Responsive Constants
   const isMobile = useMediaQuery("(max-width: 480px)");
   const isTablet = useMediaQuery("(max-width: 768px)");
+  const reduceMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
 
   // State
   const [searchQuery, setSearchQuery] = useState("");
   const [openAveModal, setOpenAveModal] = useState(false);
   const [selectedAve, setSelectedAve] = useState<Aves | null>(null);
+  // Refs
+  const sliderRef = useRef<Slider | null>(null);
 
   // Filtered Aves
   const filteredAves = avesProps?.filter((a) =>
@@ -41,11 +44,12 @@ export const Carrusel = ({ avesProps, className }: CarouselProps) => {
 
   // Setting 
   const settings = {
-    autoplay: true,
+    autoplay: !reduceMotion,
     autoplaySpeed: 2000,
     infinite: true,
     speed: 500,
-    hoverPause: true,
+    pauseOnHover: true,
+    pauseOnFocus: true,
     slidesToShow: isMobile ? 1 : isTablet ? 2 : 3,
     slidesToScroll: isMobile ? 1 : isTablet ? 2 : 3,
     initialSlide: 0,
@@ -54,7 +58,20 @@ export const Carrusel = ({ avesProps, className }: CarouselProps) => {
   return (
     <div className={className}>
       {/* Container */}
-      <div className="relative z-0">
+      <div
+        className="relative z-0"
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Carrusel de aves"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'ArrowRight') {
+            (sliderRef.current as { slickNext: () => void } | null)?.slickNext?.();
+          } else if (e.key === 'ArrowLeft') {
+            (sliderRef.current as { slickPrev: () => void } | null)?.slickPrev?.();
+          }
+        }}
+      >
         {/* Search Bar */}
         <div className="px-4 pb-4 md:w-1/2 md:m-auto">
           <input
@@ -63,26 +80,33 @@ export const Carrusel = ({ avesProps, className }: CarouselProps) => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full px-3 py-1 text-sm border rounded-lg outline-none border-primary-low"
+            role="searchbox"
+            aria-label="Buscar ave por nombre"
           />
         </div>
         {/* Slider */}
-        <Slider key={`${settings.slidesToShow}-${settings.slidesToScroll}`} {...settings}>
-          {filteredAves?.map((avesProp) => (
+        <Slider ref={sliderRef} key={`${settings.slidesToShow}-${settings.slidesToScroll}`} {...settings}>
+          {filteredAves?.map((avesProp, idx) => (
             <button
               key={avesProp.id}
               onClick={() => openAveModalWith(avesProp)}
               className="px-2 cursor-pointer"
+              aria-roledescription="slide"
+              aria-label={`${idx + 1} de ${filteredAves.length}: Ver detalles de ${avesProp.nombre_común}`}
             >
               <img
-                src={avesProp.fotografía} alt={avesProp.nombre_común}
+                src={avesProp.fotografía}
+                alt={avesProp.nombre_común}
                 className="object-cover object-top w-full rounded-lg h-60"
+                loading="lazy"
+                decoding="async"
               />
             </button>
           ))}
         </Slider>
         {/* Modal Aves */}
-        <Modal openModal={openAveModal} closeModal={closeAveModal} style={{ position: 'fixed', left: 'calc(50%)', top: 'calc(50%)', transform: 'translateY(-50%) translateX(-50%)', width: '300px', height: 'fit-content', padding: '2rem 1.5rem', borderRadius: '10px', backgroundColor: 'white', zIndex: 15 }}>
-          <h2 className="mb-2 font-bold text-center text-primary">Aves de Nicaragua</h2>
+        <Modal openModal={openAveModal} closeModal={closeAveModal} ariaLabelledBy="modal-ave-title" style={{ position: 'fixed', left: 'calc(50%)', top: 'calc(50%)', transform: 'translateY(-50%) translateX(-50%)', width: '300px', height: 'fit-content', padding: '2rem 1.5rem', borderRadius: '10px', backgroundColor: 'white', zIndex: 15 }}>
+          <h2 id="modal-ave-title" className="mb-2 font-bold text-center text-primary">Aves de Nicaragua</h2>
           <div className="w-full h-60">
             <img src={selectedAve?.fotografía} alt={selectedAve?.nombre_común} className="object-cover object-top w-full rounded-lg h-60" />
           </div>
@@ -101,11 +125,14 @@ export const CarruselReservas = ({ reservasProps, className }: CarouselProps) =>
   // Responsive Constants
   const isMobile = useMediaQuery("(max-width: 480px)");
   const isTablet = useMediaQuery("(max-width: 768px)");
+  const reduceMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
 
   // State
   const [openModal, setOpenModal] = useState(false);
   const [selectedReserva, setSelectedReserva] = useState<Reservas | null>(null);
   const [searchReserva, setSearchReserva] = useState("");
+  // Refs
+  const sliderRef = useRef<Slider | null>(null);
 
   // Handle Modal
   const openModalWith = (reserva: Reservas) => {
@@ -125,11 +152,12 @@ export const CarruselReservas = ({ reservasProps, className }: CarouselProps) =>
   );
 
   const settings = {
-    autoplay: true,
+    autoplay: !reduceMotion,
     autoplaySpeed: 2000,
     infinite: true,
     speed: 500,
-    hoverPause: true,
+    pauseOnHover: true,
+    pauseOnFocus: true,
     slidesToShow: isMobile ? 1 : isTablet ? 2 : 3,
     slidesToScroll: isMobile ? 1 : isTablet ? 2 : 3,
     initialSlide: 0,
@@ -138,7 +166,20 @@ export const CarruselReservas = ({ reservasProps, className }: CarouselProps) =>
 
   return (
     <div className={className}>
-      <div className="relative z-0">
+      <div
+        className="relative z-0"
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Carrusel de reservas naturales"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'ArrowRight') {
+            (sliderRef.current as { slickNext: () => void } | null)?.slickNext?.();
+          } else if (e.key === 'ArrowLeft') {
+            (sliderRef.current as { slickPrev: () => void } | null)?.slickPrev?.();
+          }
+        }}
+      >
         {/* Search Bar */}
         <div className="px-4 pb-4 md:w-1/2 md:m-auto">
           <input
@@ -147,25 +188,32 @@ export const CarruselReservas = ({ reservasProps, className }: CarouselProps) =>
             value={searchReserva}
             onChange={(e) => setSearchReserva(e.target.value)}
             className="w-full px-3 py-1 text-sm border rounded-lg outline-none border-primary-low"
+            role="searchbox"
+            aria-label="Buscar reserva por nombre"
           />
         </div>
-        <Slider key={`${settings.slidesToShow}-${settings.slidesToScroll}`} {...settings}>
-          {filteredReservas?.map((reservasProp) => (
+        <Slider ref={sliderRef} key={`${settings.slidesToShow}-${settings.slidesToScroll}`} {...settings}>
+          {filteredReservas?.map((reservasProp, idx) => (
             <button
               key={reservasProp.id}
               onClick={() => openModalWith(reservasProp)}
               className="px-2 cursor-pointer"
+              aria-roledescription="slide"
+              aria-label={`${idx + 1} de ${filteredReservas.length}: Ver detalles de ${reservasProp.nombre}`}
             >
               <img
-                src={reservasProp.fotografía} alt={reservasProp.nombre}
+                src={reservasProp.fotografía}
+                alt={reservasProp.nombre}
                 className="object-cover object-center w-full rounded-lg h-60"
+                loading="lazy"
+                decoding="async"
               />
             </button>
           ))}
         </Slider>
         {/* Modal Reservas */}
-        <Modal openModal={openModal} closeModal={closeModal} style={{ position: 'fixed', left: 'calc(50%)', top: 'calc(50%)', transform: 'translateY(-50%) translateX(-50%)', width: '300px', height: 'fit-content', padding: '2rem 1.5rem', borderRadius: '10px', backgroundColor: 'white', zIndex: 15 }}>
-          <h2 className="mb-2 font-bold text-center text-primary">Reservas de Nicaragua</h2>
+        <Modal openModal={openModal} closeModal={closeModal} ariaLabelledBy="modal-reserva-title" style={{ position: 'fixed', left: 'calc(50%)', top: 'calc(50%)', transform: 'translateY(-50%) translateX(-50%)', width: '300px', height: 'fit-content', padding: '2rem 1.5rem', borderRadius: '10px', backgroundColor: 'white', zIndex: 15 }}>
+          <h2 id="modal-reserva-title" className="mb-2 font-bold text-center text-primary">Reservas de Nicaragua</h2>
           <div className="w-full h-60">
             <img src={selectedReserva?.fotografía} alt={selectedReserva?.nombre} className="object-cover object-center w-full rounded-lg h-60" />
           </div>
