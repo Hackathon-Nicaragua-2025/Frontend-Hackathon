@@ -23,6 +23,7 @@ export default function Home() {
       <SEO
         title="Avify | Descubre aves y reservas naturales en Nicaragua"
         description="Explora aves de Nicaragua, aprende sobre conservación y encuentra reservas naturales para visitar de forma responsable. Únete a Avify y sé parte del cambio."
+        icon="../assets/image/LogoNegativo.svg"
       />
       {/* Nav Bar */}
       <NavBar />
