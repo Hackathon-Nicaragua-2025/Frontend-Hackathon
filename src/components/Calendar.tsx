@@ -1,10 +1,11 @@
 // Import For React
 import { useState } from 'react';
 // Import For Big Calendar
-import { Calendar, momentLocalizer, type View } from 'react-big-calendar';
+import { Calendar, momentLocalizer, type View, type Messages } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 // Import For Moment
 import moment from 'moment';
+import 'moment/locale/es';
 // Import For Types
 import type { CalendarEvent } from '../types/calendars';
 // Import For Components
@@ -15,8 +16,26 @@ interface CalendarProps {
   events: CalendarEvent[];
 }
 
-// Const Localizer
+// Set locale to Spanish for Moment and create localizer
+moment.locale('es');
 const localizer = momentLocalizer(moment)
+
+// Messages in Spanish for react-big-calendar
+const messages: Messages = {
+  allDay: 'Todo el día',
+  previous: 'Anterior',
+  next: 'Siguiente',
+  today: 'Hoy',
+  month: 'Mes',
+  week: 'Semana',
+  day: 'Día',
+  agenda: 'Agenda',
+  date: 'Fecha',
+  time: 'Hora',
+  event: 'Evento',
+  noEventsInRange: 'No hay eventos en este rango.',
+  showMore: (total: number) => `+ Ver más (${total})`,
+} as const;
 
 // Component Calendar
 export const CalendarComponent = ({ events }: CalendarProps) => {
@@ -39,9 +58,10 @@ export const CalendarComponent = ({ events }: CalendarProps) => {
   };
 
   return (
-    <div className='w-full h-[80dvh] overflow-y-auto mx-auto mb-4 md:w-3/4 lg:w-2/3'>
+    <div className='w-full h-[80dvh] overflow-y-auto mx-auto mb-4'>
       <Calendar
         localizer={localizer}
+        messages={messages}
         events={events}
         date={date}
         view={view}
@@ -65,8 +85,8 @@ export const CalendarComponent = ({ events }: CalendarProps) => {
         }}
       />
       {/* Modal */}
-      <Modal openModal={openEventModal} closeModal={closeEventModal} style={{ position: 'fixed', left: 'calc(50%)', top: 'calc(50%)', transform: 'translateY(-50%) translateX(-50%)', width: '300px', height: 'fit-content', padding: '2rem 1.5rem', borderRadius: '10px', backgroundColor: 'white', zIndex: 15 }}>
-        <h2 className="mb-2 font-bold text-center text-primary">{selectedEvent?.title}</h2>
+      <Modal openModal={openEventModal} closeModal={closeEventModal} style={{ position: 'fixed', left: 'calc(50%)', top: 'calc(50%)', transform: 'translateY(-50%) translateX(-50%)', width: '300px', height: 'fit-content', padding: '2rem 1.5rem', borderRadius: '10px', backgroundColor: 'white', zIndex: 15 }} ariaLabelledBy="event-title">
+        <h2 id="event-title" className="mb-2 font-bold text-center text-primary">{selectedEvent?.title}</h2>
         <h3 className="my-2 text-sm">
           <span className='font-bold'>
             Ave Relacionada:
