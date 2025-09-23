@@ -1,40 +1,49 @@
-# Avify - Aplicación Web de Gestión
+# 🌿 Proyecto Hackathon Nicaragua 2025
+
+Plataforma de Aviturismo y Reservas Naturales de Nicaragua
 
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-Avify es una aplicación web moderna desarrollada para la gestión de eventos y tareas, construida con las últimas tecnologías del ecosistema React.
+El proyecto es una plataforma digital que conecta el turismo de observación de aves (birdwatching) con la conservación de reservas naturales en Nicaragua.
+Su objetivo es fomentar el ecotourismo sostenible, facilitar la conexión entre turistas, guías y administradores de reservas, y ofrecer un espacio educativo para la preservación de la biodiversidad.
+
+Se trata de una solución que mezcla turismo, tecnología y educación ambiental, con un fuerte enfoque en la digitalización de experiencias y la promoción de la riqueza natural del país.
 
 ## 🏠 Páginas Principales
 
 ### 1. Inicio (Home)
+
 - Punto de entrada principal de la aplicación
-- Muestra información destacada y accesos rápidos
-- Incluye un cuestionario interactivo (QuizHome)
+- Contiene la informacion de las Aves y las Reservas Naturales.
 
 ### 2. Eventos
-- Muestra el calendario de eventos disponibles
+
+- Funcionalidad de un calendario interactivo donde se puede ver los eventos programados.
 - Permite la visualización de detalles de cada evento
-- Incluye un cuestionario específico sobre eventos (QuizEvents)
 
 ### 3. Educación
+
 - Proporciona recursos educativos
 - Incluye información sobre actividades al aire libre
-- Cuenta con un cuestionario educativo (QuizEducation)
+- Cuenta con un cuestionario educativo
 
 ### 4. Reservaciones
+
 - Formulario para realizar reservaciones
 - Visualización de reservaciones existentes
 - Gestión completa del proceso de reserva
 
 ### 5. Comunidad
+
 - Espacio para interacción entre usuarios
 - Sistema de valoraciones y publicaciones
 - Interfaz adaptada para compartir experiencias
 
 ### 6. Términos y Condiciones
+
 - Información legal sobre el uso de la plataforma
 - Detalles sobre políticas de privacidad
 - Condiciones del servicio
@@ -103,19 +112,19 @@ Cada página está diseñada con un enfoque en la experiencia de usuario, siendo
 
 ```text
 src/
-├── assets/          # Recursos estáticos (imágenes, fuentes, etc.)
-├── components/      # Componentes reutilizables
-├── context/         # Contextos de React
-├── data/            # Datos estáticos
-├── hooks/           # Custom Hooks
-├── json/            # Archivos JSON
-├── layouts/         # Componentes de diseño
-├── pages/           # Componentes de página
-├── routes/          # Configuración de rutas
-├── types/           # Tipos de TypeScript
-├── App.tsx          # Componente principal
+├── assets/           # Recursos estáticos (imágenes, fuentes, etc.)
+├── components/       # Componentes reutilizables
+├── context/          # Contextos de React
+├── data/             # Datos estáticos
+├── hooks/            # Custom Hooks
+├── json/             # Archivos JSON
+├── layouts/          # Componentes de diseño
+├── pages/            # Componentes de página
+├── routes/           # Configuración de rutas
+├── types/            # Tipos de TypeScript
+├── App.tsx           # Componente principal
 ├── ErrorBoundary.tsx # Manejador de errores
-└── main.tsx         # Punto de entrada de la aplicación
+└── main.tsx          # Punto de entrada de la aplicación
 ```
 
 ## 🛠️ Comandos disponibles
@@ -134,18 +143,10 @@ pnpm preview
 pnpm lint
 ```
 
-## 📝 Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más información.
-
-## 🤝 Contribución
-
-Las contribuciones son bienvenidas. Por favor, lee las [pautas de contribución](CONTRIBUTING.md) antes de enviar un pull request.
-
 ## 📧 Contacto
 
-Para consultas o soporte, por favor contacta a [tu correo electrónico o equipo].
+Para consultas o soporte, por favor contacta a <AvifyHackathon@gmail.com>.
 
 ---
 
-Desarrollado con ❤️ por [Tu Nombre o Equipo] para [Nombre del Proyecto/Hackathon]
+Desarrollado con ❤️ por Alas Nicas para el Hackathon Nicaragua 2025
